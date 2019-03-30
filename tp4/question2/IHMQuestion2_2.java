@@ -27,22 +27,33 @@ public class IHMQuestion2_2 extends JFrame {
         enHaut.setBackground(Color.magenta);
         
 
-        // à compléter à l'identique de la question 2_1, (du copier/coller)...
-        // le bouton A a 3 observateurs jbo1, jbo2 et jbo3
-
-        // le bouton B a 2 observateurs jbo1 et jbo2
-
-        // le bouton C a 1 observateur jbo1
-
-        // à compléter pour la question 2_2 (JMouseObserver)
-            // le bouton A a 1 observateur jmo1
-            // le bouton B a 1 observateur jmo2
-            // le bouton C a 1 observateur jmo3
+        JButtonObserver jbo1=new JButtonObserver("jbo1",contenu);
+        JButtonObserver jbo2=new JButtonObserver("jbo2",contenu);
+        JButtonObserver jbo3=new JButtonObserver("jbo3",contenu);
         
+       
+         boutonA.addActionListener(jbo1);
+          boutonA.addActionListener(jbo2);
+           boutonA.addActionListener(jbo3);
+           
+            boutonB.addActionListener(jbo1);
+             boutonB.addActionListener(jbo2);
+             
+              boutonC.addActionListener(jbo1);
+              
+        JMouseObserver jom1=new JMouseObserver("jom1",contenu);
+        JMouseObserver jom2=new JMouseObserver("jom2",contenu);
+        JMouseObserver jom3=new JMouseObserver("jom3",contenu);
+        
+            boutonA.addMouseListener(jom1);
+            
+                boutonB.addMouseListener(jom2);
+                
+                    boutonC.addMouseListener(jom3);
     }
     
      public static void main(String[] args){
-        new IHMQuestion2_1();
+     //   new IHMQuestion2_1();
         new IHMQuestion2_2();
     }
 
